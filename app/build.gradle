@@ -37,6 +37,18 @@ jacocoAndroidUnitTestReport {
     excludes += ['**/com/example/unittesting/login/view/**']
 }
 
+plugins {
+  id "org.sonarqube" version "3.5.0.2730"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "prociow_Android-Testing-With-Kotlin"
+    property "sonar.organization", "prociow"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 dependencies {
     compile 'com.android.support:appcompat-v7:27.0.0'
     compile 'com.android.support:design:27.0.0'
